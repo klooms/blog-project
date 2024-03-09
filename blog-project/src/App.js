@@ -1,14 +1,11 @@
-import './App.css';
-import MainLayout from './Components/MainLayout';
-import HomePage from './pages/HomePage';
+import "./App.css";
+import HomePage from "./pages/home/HomePage";
 
 function App() {
   return (
-   <div classname="App">
-    <div className="App font-opensans"></div>
-    <HomePage/>
-   </div>
+    <div className="App font-opensans">
+      <HomePage />
+    </div>
   );
 }
-
 export default App;
