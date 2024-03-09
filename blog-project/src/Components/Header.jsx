@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { MdKeyboardArrowDown } from "react-icons/md";
+
 import { images } from "../constants";
+
 const navItemsInfo = [
   { name: "Home", type: "link" },
   { name: "Articles", type: "link" },
@@ -9,13 +11,16 @@ const navItemsInfo = [
   { name: "Pricing", type: "link" },
   { name: "Faq", type: "link" },
 ];
+
 const NavItem = ({ item }) => {
   const [dropdown, setDropdown] = useState(false);
+
   const toggleDropdownHandler = () => {
     setDropdown((curState) => {
       return !curState;
     });
   };
+
   return (
     <li className="relative group">
       {item.type === "link" ? (
@@ -57,8 +62,10 @@ const NavItem = ({ item }) => {
     </li>
   );
 };
+
 const Header = () => {
   const [navIsVisible, setNavIsVisible] = useState(false);
+
   const navVisibilityHandler = () => {
     setNavIsVisible((curState) => {
       return !curState;
@@ -99,4 +106,5 @@ const Header = () => {
     </section>
   );
 };
+
 export default Header;
